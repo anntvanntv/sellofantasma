@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2>SHOP</h2>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="cart">
+                    <a href="/cart">
+                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        {{!-- <div class="image">
+            <img src="/images/camisetaAmarilla.jpg" alt="camiseta-amarilla">
+            <h3>Camiseta amarilla</h3>
+            <h3>15,00€</h3>
+            <a class="add-cart cart1" href="#">Add Cart</a>
+            <input type="hidden" value="15">
+        </div>
+        <div class="image">
+            <img src="/images/mecheroCocina.jpg" alt="mecherococina">
+            <h3>Mechero Cocina</h3>
+            <h3>5,00€</h3>
+            <a class="add-cart cart2" href="#">Add Cart</a>
+            <input type="hidden" value="5">
+        </div>
+        <div class="image">
+            <img src="/images/posterElsaEspanto.jpg" alt="posterElsaEspanto">
+            <h3>Poster Elsa Espanto</h3>
+            <h3>10,00€</h3>
+            <a class="add-cart cart3" href="#">Add Cart</a>
+            <input type="hidden" value="10">
+        </div>
+        <div class="image">
+            <img src="/images/camisetaBlanca.jpg" alt="camisetablanca">
+            <h3>Camiseta blanca</h3>
+            <h3>15,00€</h3>
+            <a class="add-cart cart4" href="#">Add Cart</a>
+            <input type="hidden" value="15">
+        </div> --}}
+
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>    
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
