@@ -8,57 +8,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Shopping Cart</title>
 </head>
 <body>
     <header>
-        <div class="overlay"></div>
-        <nav>
-            <h2>SHOP</h2>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li class="cart">
-                    <a href="/cart">
-                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
+        <div id="header"><!---#header-->
+            
+           <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/0034328131_100.png" ></a>
+        </div> <!---#header-->
+ 
+        <div class="cart">
+            <a href="/cart">
+                <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+            </a>
+        </div>   <!--.cart-->                 
     </header>
 
     <div class="container">
         {{!-- <div class="image">
             <img src="/images/camisetaAmarilla.jpg" alt="camiseta-amarilla">
-            <h3>Camiseta amarilla</h3>
-            <h3>15,00€</h3>
+            <h4 class="tituloproducto">Camiseta amarilla</h4>
+            <h4>15,00€</h4>
             <a class="add-cart cart1" href="#">Add Cart</a>
             <input type="hidden" value="15">
         </div>
         <div class="image">
             <img src="/images/mecheroCocina.jpg" alt="mecherococina">
-            <h3>Mechero Cocina</h3>
-            <h3>5,00€</h3>
+            <h4>Mechero Cocina</h4>
+            <h4>5,00€</h4>
             <a class="add-cart cart2" href="#">Add Cart</a>
             <input type="hidden" value="5">
         </div>
         <div class="image">
             <img src="/images/posterElsaEspanto.jpg" alt="posterElsaEspanto">
-            <h3>Poster Elsa Espanto</h3>
-            <h3>10,00€</h3>
+            <h4>Poster Elsa Espanto</h4>
+            <h4>10,00€</h4>
             <a class="add-cart cart3" href="#">Add Cart</a>
             <input type="hidden" value="10">
         </div>
         <div class="image">
             <img src="/images/camisetaBlanca.jpg" alt="camisetablanca">
-            <h3>Camiseta blanca</h3>
-            <h3>15,00€</h3>
+            <h4>Camiseta blanca</h4>
+            <h4>15,00€</h4>
             <a class="add-cart cart4" href="#">Add Cart</a>
             <input type="hidden" value="15">
         </div> --}}
 
 
     </div>
+       
+    <footer>
+        <p> &copy Sello fantasma</p>
+        <a href="/">Home</a>
+        <a href="/grupos">Grupos</a>
+        <a href="/index">Tienda</a>
+        <a href="#">Novedades</a>
+        <a href="/about">Sello fantasma</a>
+    
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>    
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

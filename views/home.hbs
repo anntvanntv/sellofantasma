@@ -3,11 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
+    <title>Sello Fantasma Portada</title>
 </head>
 <body>
-    <h1>This is the Home Page</h1>
-    <h2>My name is {{name}}</h2>
+
+
+    <div id="container">
+
+        <div id="header"><!---header-->
+            
+           <a href="#"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/0034328131_100.png" ></a>
+        </div> <!---header-->
+
+        <div id="links"> <!---links-->
+        
+                <div class="titulos"><a href="/grupos" class="atitulos"><p>Grupos</p></div></a>
+                <div class="titulos"><a href="/index" class="atitulos"><p>Tienda</p></div></a>
+                <div class="titulos"><a href="news" class="atitulos"><p>Novedades</p></div></a>
+                <div class="titulos"><a href="/about" class="atitulos"><p>Sello Fantasma</p></div></a>
+        </div>
+      
+    </div> <!---container-->
+
+    
+    <footer>
+        <p> &copy Sello fantasma</p>
+        <a href="grupos.html">Grupos</a>
+        <a href="/index">Tienda</a>
+        <a href="#">Novedades</a>
+        <a href="/about">Sello fantasma</a>
+    
+    </footer>
     
 </body>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/main.js"></script>
 </html>

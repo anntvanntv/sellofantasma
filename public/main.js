@@ -1,15 +1,23 @@
 let carts = document.querySelectorAll('.add-cart'); //1
 
+
+
+
+
 let products = [];
 
 async function getProducts() {
     const response = await axios.get('http://localhost:5000/products');
-    console.log(response.data);
+    //console.log(response.data);
     products = response.data.products
 
     populateProducts()
 } 
 getProducts();
+
+
+
+   
 
 
 function populateProducts() {
@@ -20,8 +28,8 @@ function populateProducts() {
             `
             <div class="image">
                 <img src="${product.image}" alt="${product.description}">
-                <h3>${product.name}</h3>
-                <h3>€${product.price}</h3>
+                <h4>${product.name}</h4>
+                <h4>€${product.price}</h4>
                 <a class="add-cart cart${i+1}" href="#">Add Cart</a>
                 <input type="hidden" value="15">
             </div>
@@ -40,26 +48,26 @@ function populateProducts() {
 let products = [      //7. Afegeix el nom dels productes com a objecte{} dins un array[]
     {
         name: 'camiseta Amarilla',    
-        tag: 'camisetaAmarilla',
+        tag: 'camisetaamarilla',
         price: 15,
         inCart: 0,
-        image: '/images/camisetaAmarilla.jpg'
+        image: '/images/camisetaamarilla.jpg'
     },
     {
         name: 'mechero Cocina',
-        tag: 'mecheroCocina',
+        tag: 'mecherococina',
         price: 5,
         inCart: 0
     },
     {
         name: 'poster ElsaEspanto',
-        tag: 'posterElsaEspanto',
+        tag: 'posterelsaespanto',
         price: 10,
         inCart: 0
     },
     {
         name: 'camiseta Blanca',
-        tag: 'camisetaBlanca',
+        tag: 'camisetablanca',
         price: 15,
         inCart: 0
     }
@@ -105,19 +113,35 @@ function onLoadNumbers() {  //12.Quan refresquem la pàgina, el '.cart span' que
 }
 
 
-function cartNumbers(product) { //3
+function cartNumbers(product, action) { //3
     //console.log("the product clicked is", product) 17.Fem el console.log i veiem l'objecte del producte que hem clicat
     let productNumbers = localStorage.getItem('cartNumbers'); //5 (guarda el localStorage a productNumbers)
     
 
     productNumbers = parseInt(productNumbers); //7b.el converteix en nḿero, abans era String
+   
+   let cartItems = localStorage.getItem('productsInCart');
+   cartItems = JSON.parse(cartItems);
+
+   if( action == "decrease") {
+        localStorage.setItem('cartNumbers', productNumbers - 1);
+        document.querySelector('.cart span').textContent = productNumbers - 1;
+   } else if ( productNumbers ) {
+        localStorage.setItem("cartNumbers", productNumbers + 1)
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+
+   } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+   }
+   /* 
     if( productNumbers ) {  //8. si hi ha algun clicat, suma-li un al local Storage
         localStorage.setItem('cartNumbers', productNumbers + 1); //6.és la primera ordre de la funció, al principi l'escriu així: localStorage.setItem('cartNumbers', 1); que vol dir que guarda el localStorage, de moment un cop
         document.querySelector('.cart span').textContent = productNumbers + 1; //11. es veu reflexat en el carret
     } else {
         localStorage.setItem('cartNumbers', 1) //9.Si no n'hi ha cap clicat, afegeix l'1
         document.querySelector('.cart span').textContent = 1; //10.l'1 afegit es veu reflexat en el carret ".cart span"
-    }
+    } */
 
     setItems(product);
 
@@ -161,18 +185,22 @@ function setItems(product) { //18.Creem aquesta funció
 
 
 
-function totalCost(product) { //a.1//calcular total costs
+function totalCost(product, action) { //a.1//calcular total costs
    // console.log("the product is", product.price); //a.3
    let cartCost = localStorage.getItem("totalCost"); //a.5 Aquí queda guardat el total Cost inicial, o sigui, sense sumar encara
     // console.log("My cartCost is", cartCost); //a.6 Mirem el consol
    // console.log(typeof cartCost); //a.7 ens dona string
+   if ( action == "decrease") {
+        cartCost = parseInt(cartCost);
+
+        localStorage.setItem('totalCost', cartCost - product.price);
    
-   if(cartCost != null) { //A.9 posem a dins d'aquest funció el A.8
-    cartCost = parseInt(cartCost); //A.8 Converteix el String en número
-    localStorage.setItem("totalCost", cartCost + product.price) //A10 Queda a dins del total Cost la suma dels preus
-   } else {  //A11 Posem a dins de l'else el punt a.4
-    localStorage.setItem("totalCost", product.price); //a.4 primer creem el concepte totalCost per al LocalStorage
-   }
+     } else if(cartCost != null) { //A.9 posem a dins d'aquest funció el A.8
+      cartCost = parseInt(cartCost); //A.8 Converteix el String en número
+      localStorage.setItem("totalCost", cartCost + product.price) //A10 Queda a dins del total Cost la suma dels preus
+     } else {  //A11 Posem a dins de l'else el punt a.4
+      localStorage.setItem("totalCost", product.price); //a.4 primer creem el concepte totalCost per al LocalStorage
+     }
    
    
    
@@ -192,7 +220,7 @@ function displayCart() { //B1 Creem la funció i la posem abaix de tot, perquè 
     let cartCost = localStorage.getItem("totalCost"); //B11
     //console.log(cartItems); B2
     if(cartItems && productContainer) { //B4 Si existeixen aquests dos elements en la pàgina, amb altres paraules: si estic a la pàgina de la cart i si s'han seleccionat productes
-        console.log("running"); //b5 comprovar
+        //console.log("running"); //b5 comprovar
         productContainer.innerHTML = ''; //B6 per a que quan es carregui la pàgina, si ja hi ha alguna cosa, que quedi buida
         Object.values(cartItems).map(item => { //B7 To loop thrue to all of these (all the values of objects seleccionats, )
         
@@ -226,6 +254,98 @@ function displayCart() { //B1 Creem la funció i la posem abaix de tot, perquè 
         `; 
     }     //Abans d'acabar el B10, abans de posar cartCost entre claus, s'ha de fer el B11, que és un copiar/pegar
 
+    deleteButtons();
+    manageQuantity()
+}
+
+
+
+
+function deleteButtons() {
+    let deleteButtons = document.querySelectorAll('.productincart ion-icon');
+    let productName;
+    let productNumbers = localStorage.getItem('cartNumbers'); //dins d'aquest let es guarden el número de productes que hi ha al localstorage
+    let cartItems = localStorage.getItem('productsInCart'); //aquí es guarda quins productes són, la info
+    cartItems = JSON.parse(cartItems); //el JSON converteix la info del let cartItems en un object de javascript normal i corrent
+    //console.log(cartItems);
+    let cartCost = localStorage.getItem('totalCost');
+    
+
+    for(let i=0; i < deleteButtons.length; i++){
+        deleteButtons[i].addEventListener('click', () => {
+            //console.log('funciona');
+            productName = deleteButtons[i].parentElement.textContent.trim().toLowerCase().replace(/ /g, '');
+            //console.log(productName);
+            //console.log("we have " + productNumbers);
+            //console.log(cartItems[productName].name + " " + cartItems[productName].inCart) //ens diu el "name" i la cuantitat que hi ha al inCart
+
+           localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].inCart) //reemplaza el número de cartNumber (setItem 'cartNumber') el que hi ha dins de cartNumbers per:
+                                                                                                //la quantitat de productNumbers menys la quantitat de inCart
+       
+            localStorage.setItem('totalCost', cartCost - (cartItems[productName].price * cartItems[productName].inCart)) //canvia el totalCost
+
+            delete cartItems[productName]; 
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+            displayCart();
+            onLoadNumbers();
+
+            });
+    }
+}
+
+function manageQuantity() {
+     let decreaseButtons = document.querySelectorAll('.decrease');
+     let increaseButtons = document.querySelectorAll('.increase');
+    let cartItems = localStorage.getItem('productsInCart'); 
+     //console.log(cartItems);
+     let currentQuantity = 0;
+     let currentProduct = "";
+     //let productNumbers = localStorage.getItem('cartNumbers'); BORRAR
+     //let cartCost = localStorage.getItem('totalCost');  BORRAR
+     //let productName; BORRAR
+     cartItems = JSON.parse(cartItems);
+     console.log(cartItems);
+
+
+     for (let i=0; i < decreaseButtons.length; i++ ) {
+        decreaseButtons[i].addEventListener('click', () => {
+            currentQuantity = decreaseButtons[i].nextElementSibling.textContent.trim().toLowerCase().replace(/ /g, '');
+             console.log(currentQuantity);
+            currentProduct = decreaseButtons[i].previousElementSibling.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g, '');
+             console.log(currentProduct);
+
+             if ( cartItems[currentProduct].inCart > 1){
+            cartItems[currentProduct].inCart -=  1; 
+            cartNumbers( cartItems[currentProduct], "decrease" );
+            totalCost( cartItems[currentProduct], "decrease" );
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+            displayCart();
+            }
+        })
+    }
+
+     for (let i=0; i < increaseButtons.length; i++ ) {
+        increaseButtons[i].addEventListener('click', () => {
+            currentQuantity = decreaseButtons[i].nextElementSibling.textContent.trim().toLowerCase().replace(/ /g, '');
+            console.log(currentQuantity);
+            currentProduct = decreaseButtons[i].previousElementSibling.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g, '');
+            console.log(currentProduct);
+
+           
+
+            
+           cartItems[currentProduct].inCart +=  1; 
+           cartNumbers( cartItems[currentProduct] );
+           totalCost( cartItems[currentProduct], );
+           localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+           displayCart();
+           
+            
+        })
+     }
 }
 
 onLoadNumbers(); //15.We call the function, criquem la funció per a que funcioni

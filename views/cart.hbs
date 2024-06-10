@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Shopping Cart</title>
 </head>
 <body>
     <header>
-        <div class="overlay"></div>
-        <nav>
-            <h2>SHOP</h2>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li class="cart">
-                    <a href="/cart">
-                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div id="header"><!---#header-->
+            
+           <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/0034328131_100.png" ></a>
+        </div> <!---#header-->
+ 
+        <div class="cart">
+            <a href="/cart">
+                <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+            </a>
+        </div>
     </header>
 
     <div class="products-container">
@@ -39,9 +37,23 @@
         </div>
     </div>
 
-    <script src="/main.js"></script>
+
+       <footer>
+        <p> &copy Sello fantasma</p>
+        <a href="/">Home</a>
+        <a href="grupos.html">Grupos</a>
+        <a href="/index">Tienda</a>
+        <a href="#">Novedades</a>
+        <a href="about.html">Sello fantasma</a>
+    
+    </footer>
+
+
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/main.js"></script>
+
 </body>
 </html>

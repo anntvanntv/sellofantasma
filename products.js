@@ -1,43 +1,43 @@
 exports.productList = [
     {
-        name: 'camiseta Amarilla',
+        name: 'Camiseta amarilla',
         description: 'Camiseta amarilla Sello fantasma',
-        tag: 'camisetaAmarilla',
+        tag: 'camisetaamarilla',
         price: 15,
         inCart: 0,
-        image: '/images/camisetaAmarilla.jpg'
+        image: '/images/camisetaamarilla.jpg'
     },
     {
-        name: 'mechero Cocina',
+        name: 'Mechero cocina',
         description: 'Mechero cocina Maridaje Elsa de Alfonso',
-        tag: 'mecheroCocina',
+        tag: 'mecherococina',
         price: 5,
         inCart: 0,
-        image: '/images/mecheroCocina.jpg'
+        image: '/images/mecherococina.jpg'
     },
     {
-        name: 'poster ElsaEspanto',
+        name: 'Poster Elsa Espanto',
         description: 'Poster pop concierto Espanto y Elsa de Alfonso',
-        tag: 'posterElsaEspanto',
+        tag: 'posterelsaespanto',
         price: 10,
         inCart: 0,
-        image: '/images/posterElsaEspanto.jpg'
+        image: '/images/posterelsaespanto.jpg'
     },
     {
-        name: 'camiseta Blanca',
+        name: 'Camiseta blanca',
         description: 'Camiseta blanca Sello fantasma',
-        tag: 'camisetaBlanca',
+        tag: 'camisetablanca',
         price: 15,
         inCart: 0,
-        image: '/images/camisetaBlanca.jpg'
+        image: '/images/camisetablanca.jpg'
     },
     {
-        name: 'mechero fumador',
+        name: 'Mechero tabaco',
         description: 'mechero para la fumadora y para el fumador',
-        tag: 'MecheroFumador',
+        tag: 'mecherotabaco',
         price: 4,
         inCart: 0,
-        image: '/images/MecheroFumador.jpg'
+        image: '/images/mecherotabaco.jpg'
 
     }
 ]

@@ -19,8 +19,15 @@ app.set('view engine', 'hbs'); //per a renderitzar
 //})
 
 app.use('/', require('./routes/pages'));
+app.use('/index', require('./routes/pages'));
+app.use('/cart', require('./routes/pages'));
 app.use('/products', require('./routes/products'));
+app.use('/grupos', require('./routes/pages'));
+app.use('/silenciosepulcral', require('./routes/pages'));
+app.use('/elsa', require('./routes/pages'));
+app.use('/news', require('./routes/pages'));
+app.use('/about', require('./routes/pages'));
 
-app.listen(5000, ()=>{   //4. La funció és per veure el console.log quan comencem el servert (start our server)
-    console.log("server is running on port 5000");
+app.listen(5000, ()=>{   //4. La funció és per veure el console.log quan comencem el server (start our server)
+    console.log("server is running on localhost:5000");
 })
