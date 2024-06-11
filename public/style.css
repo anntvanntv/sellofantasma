@@ -195,7 +195,9 @@ h4 {
     color:yellow;
 
 }
+
 footer {
+    margin-top: 70%;
     margin:auto;
     display:flex;
     flex-direction: row;
@@ -204,10 +206,17 @@ footer {
     font-style: italic;
 }
 @media screen and (min-width: 810px){
-    footer {
-        margin-top: 70%;
-    }
+footer {
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    font-style: italic;
 }
+}
+
+
 footer a {
     text-decoration: none;
     margin: 50px 20px 20px;
