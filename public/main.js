@@ -7,7 +7,7 @@ let carts = document.querySelectorAll('.add-cart'); //1
 let products = [];
 
 async function getProducts() {
-    const response = await axios.get('https://clownfish-app-4zbos.ondigitalocean.app/index/products');
+    const response = await axios.get('https://clownfish-app-4zbos.ondigitalocean.app/products');
     //console.log(response.data);
     products = response.data.products
 
