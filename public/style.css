@@ -203,6 +203,11 @@ footer {
     justify-content: center; 
     font-style: italic;
 }
+@media screen and (min-width: 810px){
+    footer {
+        margin-top: 70%;
+    }
+}
 footer a {
     text-decoration: none;
     margin: 50px 20px 20px;
