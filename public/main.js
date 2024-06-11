@@ -1,5 +1,7 @@
 let carts = document.querySelectorAll('.add-cart'); //1
 
+let stage = 'dev';
+
 
 
 
@@ -7,7 +9,8 @@ let carts = document.querySelectorAll('.add-cart'); //1
 let products = [];
 
 async function getProducts() {
-    const response = await axios.get('https://clownfish-app-4zbos.ondigitalocean.app/products');
+    const host = stage === 'dev' ? 'http://localhost:5000' : 'https://sellofantasma.click' 
+    const response = await axios.get(`${host}/products`);
     //console.log(response.data);
     products = response.data.products
 
