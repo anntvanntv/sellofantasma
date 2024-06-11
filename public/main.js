@@ -1,6 +1,6 @@
 let carts = document.querySelectorAll('.add-cart'); //1
 
-let stage = 'dev';
+let stage = 'prod';
 
 
 
