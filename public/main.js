@@ -109,7 +109,7 @@ function onLoadNumbers() {  //12.Quan refresquem la pàgina, el '.cart span' que
     let productNumbers = localStorage.getItem('cartNumbers'); //13.Comprova el localStorage, 
 
     if(productNumbers) {   //14.Si existeix productNumbers, o sigui, si no és 0, iguala'l al carrito, que es reflexi
-        document.querySelector('.cart span').textContent = productNumbers
+        document.querySelector('.cart span').textContent = productNumbers;
     }
 
 
@@ -230,10 +230,10 @@ function displayCart() { //B1 Creem la funció i la posem abaix de tot, perquè 
             productContainer.innerHTML += `        
               <div class="productincart"> 
                     <ion-icon name="close-outline"></ion-icon>
-                    <img src="./images/${item.tag}.jpg">
+                    <img src="./images/${item.tag}.png">
                     <span>${item.name}</span>
               </div>
-              <div class="price">$${item.price},00</div>
+              <div class="price">€${item.price},00</div>
               <div class="quantity"></div>
                     <ion-icon class="decrease" name="chevron-back-circle-outline"></ion-icon>
                     <span>${item.inCart}</span>
@@ -244,7 +244,7 @@ function displayCart() { //B1 Creem la funció i la posem abaix de tot, perquè 
               </div>
             `             //B8 Aquest afegeix productes, i es posen les comes aquestes rares
                         //B9 Afegim el dic i copiem el ion-icon que hem buscat a la pàgina ion icon amb el nom de close i és una creu de tancar, el nom de la classe del icon el posem nosaltres
-        });              ////el nom de la classe l'he canviat per a poder estilitzar-lo millor
+        });              
                     //B10: ara fem el productContainer.innerHTML
         productContainer.innerHTML += `
             <div class="basketTotalContainer">
@@ -308,15 +308,15 @@ function manageQuantity() {
      //let cartCost = localStorage.getItem('totalCost');  BORRAR
      //let productName; BORRAR
      cartItems = JSON.parse(cartItems);
-     console.log(cartItems);
+     //console.log(cartItems);
 
 
      for (let i=0; i < decreaseButtons.length; i++ ) {
         decreaseButtons[i].addEventListener('click', () => {
             currentQuantity = decreaseButtons[i].nextElementSibling.textContent.trim().toLowerCase().replace(/ /g, '');
-             console.log(currentQuantity);
+             //console.log(currentQuantity);
             currentProduct = decreaseButtons[i].previousElementSibling.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g, '');
-             console.log(currentProduct);
+             //console.log(currentProduct);
 
              if ( cartItems[currentProduct].inCart > 1){
             cartItems[currentProduct].inCart -=  1; 
@@ -332,9 +332,9 @@ function manageQuantity() {
      for (let i=0; i < increaseButtons.length; i++ ) {
         increaseButtons[i].addEventListener('click', () => {
             currentQuantity = decreaseButtons[i].nextElementSibling.textContent.trim().toLowerCase().replace(/ /g, '');
-            console.log(currentQuantity);
+           // console.log(currentQuantity);
             currentProduct = decreaseButtons[i].previousElementSibling.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g, '');
-            console.log(currentProduct);
+           // console.log(currentProduct);
 
            
 

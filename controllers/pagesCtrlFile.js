@@ -1,4 +1,9 @@
 
+exports.termsCtrlFunction = (req, res) => {
+    res.render('terms&conditions');
+}
+
+
 exports.aboutCtrlFunction = (req, res) => {
     res.render('about');
 }

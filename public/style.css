@@ -1,67 +1,28 @@
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-   /*font-family: 'Roboto', sans-serif;*/
 }
 body, html {
-    background-color: rgb(7, 7, 7);
-    color:white;
+    background-color: white;
+    color:black;
     margin:0;
     padding:0;
     box-sizing:border-box;  
     width:100vw;
-    font-family: "Playfair Display", serif;
-    
+    font-family: "Raleway", sans-serif;   
 }
-/*header {
-    background-image: url('images/cover.png');
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-    height:311px;
-    position:relative;
-}*/
-/*.overlay {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    padding: 0 !important;
-    margin: 0 !important;
-    background-color: rgba(247, 239, 239, 0.856);
-}*/
-/*nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px 60px 0 60px;
-}
-nav li {
- list-style: none;
- display: inline-block;
- padding-right: 10px;
- padding-left: 10px;
-} */
+
 /*-------------------------- Tienda ------------------------------*/
 .cart {
    display:flex;
    justify-content: end;
-   margin-right: 8%;
-   
+   margin-right: 8%;   
 }
-@media screen and (min-width: 810px){
-    .cart {
-        margin-right: 4%;
-    }
+#cabecera{
+    background-color: rgb(243, 237, 237);
 }
 .cart span {
     padding-left: 5px;
@@ -90,37 +51,22 @@ nav li {
     flex-wrap: wrap;
     margin-top: 50px;
     padding-bottom: 100px;
-    color: yellow;
+    color: rgb(19, 19, 17);
 }
 .container {
-    flex-direction: column;
     max-width: 1000px;
     margin: 50px auto 0;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
-.image {
-    
+.image {    
     position: relative;
     overflow: hidden;
-    width: 400px;
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
 }
-@media screen and (min-width: 810px) {
-    .container {
-        justify-content:space-between;
-        flex-direction: row;
-    }
-    .image {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    }
-
 .image img {
     width: 100%;
 }
@@ -133,11 +79,6 @@ nav li {
     cursor: pointer;
     text-align: center;
 }
-
-/* .image:hover .cart1,
-.image:hover .cart2,
-.image:hover .cart3,
-.image:hover .cart4 { */
 .showAddCart {
     bottom: 42px;
     opacity: 1;
@@ -149,36 +90,51 @@ h4 {
     letter-spacing: 0.5px;
     font-weight: 500;
 }
-.increase {
-    
-    background-color: pink;
-    
+.subtienda {
+  font-weight: 700;
+  color: #e7184e;
+}
+.subtienda p {
+    margin: auto 5%;
+}
+.subtienda a {
+text-decoration: none;
+color: black;
+font-weight: 800;
+transition: all 0.3s ease;
+font-size: 14px;    
+}
+.subtienda a:hover{
+        color:red;
+}
+.subtienda p{
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 /*----------------------------------------HOME-----------------*/
 
 #container{
-    display:flex;
-    flex-direction: column;
-    background-color: black;
-    
+   /* display:flex;
+    flex-direction: column; */
+    background-color: white;
+}
+#header {
+    width: 233px;
 }
 #header img{
     width:100%;
-    padding-top: 20px;
 }
 #links{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(0, 0, 0);
-    margin:5% auto;
+    display: none;
+   /*  display: flex;*/
+    background-color:rgba(38, 35, 35, 0.16)
+   /* margin:5% auto;
     height:100%;
     display: flex;
     flex-direction: column;
     align-items:center;
-    /*padding: 3rem;*/
     width: 100%;
-    margin-top: 100px;
-    /*background-color: beige;*/   
+    margin-top: 100px;   */
 }
 .titulos{
     margin:5% auto;
@@ -189,46 +145,57 @@ h4 {
 }
 .titulos a{
     text-decoration: none;
-    color:white;
+    color:black;
 }
 .atitulos:hover {
-    color:yellow;
-
+    color:white;
+    transition: .2s ease-in-out;
 }
-
-footer {
-    
-    margin: 70% auto auto;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; 
-    font-style: italic;
-}
-@media screen and (min-width: 810px){
-footer {
-    margin:auto;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; 
-    font-style: italic;
-}
-}
-
-
 footer a {
     text-decoration: none;
-    margin: 50px 20px 20px;
-    color: white;
+    /* margin: 50px 20px 20px; */
+    color: black;
 }
-footer p {
+/* footer p {
     margin: auto 20px 20px;
-    
-}
+} */
 footer a:hover {
-    color: yellow;
-    
+    color: rgba(19, 24, 1, 0.356);
+}
+footer {   
+    margin: 87% auto auto;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    font-style: italic;
+    font-size: 10px;
+}   
+#header {
+    margin: 5% auto;
+} 
+ #texthome {
+    height: 72vh;
+} 
+#texthome p{
+    text-align: center;
+    margin-top: 55px;
+    font-size: 20px;
+}
+/*---provant glowing text------*/
+#texthome{
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: -10px -10px 12px #fff, -10px --10px 14px #fff, 0 0 16px #070305,
+        0 0 18px #070305;
+    }
+    100% {
+        text-shadow: 0 0 12px #fff, 0 0 14px #07030580, 0 0 16px #07030580, 0 0 18px #07030580;
+    }
 }
 
 
@@ -244,8 +211,6 @@ footer a:hover {
 .products-container ion-icon  {
     font-size:25px;
     color:blue;
-   /* margin-left: 10px;
-    margin-right: 10px;*/
     cursor: pointer;
 }
 .product-header {
@@ -253,45 +218,39 @@ footer a:hover {
     max-width: 650px;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 4px solid lightgray;
+    /* border-bottom: 4px solid lightgray; */
     margin: 0 auto;
 }
 .product-header h5 {
     margin: 5%;
 }
-
 .product-title {
     width:45%;
 }
-
 .price {
     width: 15%;
-    border-bottom: 4px solid lightgray;
+    /* border-bottom: 4px solid lightgray; */
     display:flex;
     align-items: center;
 }
 .quantity {
     width: 30%;
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
     display: flex;
     align-items: center;
 }
-
 .product {
     width:45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
 }
 
 .productincart img {
     width: 25%;
-    /*margin:5%;*/
-  
 }
-
 .basketTotalContainer {
     display: flex;
     justify-content: flex-end;
@@ -304,47 +263,60 @@ footer a:hover {
 .basketTotal {
     width: 10%;
 }
+.buyBtnCtn {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.startCheckout {
+    padding: 10px 20px;
+    background-color: rgb(36, 114, 26);
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 10%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.startCheckout:hover {
+    background-color: rgba(36, 114, 26, 0.555);
+}
 
 /*------------------------------------------ GRUPOS -------------------------------------*/
 
-
 #bandas{
     display: flex;
-    flex-direction: column;
-    
+    flex-wrap:wrap;
 }
 #bandas a{
     text-decoration: none;
 }
 #silenciosepulcral img{
     width: 100%;
-   /* margin-left:14px;*/
 }
-
 #elsadealfonso img{
     width:100%;
 }
 .banda{
     margin: auto 10%;   
 }
-@media screen and (min-width: 810px) {
-    .banda {
-        margin: auto;
-        width: 455px;
-    }
+.banda h3{
+    font-size: 14px;
 }
-
 .banda-text span{
     display:none;
 }
-h3, h2{
-    color:white;
-    letter-spacing: 1px;
+h2{
     margin: 3px auto 30px;
 }
 
+h3, h2{
+    color:black;
+    letter-spacing: 1px;
+    /* margin: 3px auto 30px; */
+}
 .catalogo >h3 {
-    color: white;
+    color: rgb(50, 247, 10);
 } 
 .containerfoto{
     position: relative;
@@ -387,27 +359,39 @@ h3, h2{
   left: 0;
   height: 100%;
 }
-
+#cabecera{
+    display: none;
+}
+#elsadealfonso h3 span{
+    font-weight: lighter;
+    font-size: 11px;
+    margin-left: 100px;
+}
+.subtelsa {
+    display: flex;
+    justify-content: space-between;
+}
 
 /*----------------------- Silencio sepulcral Elsa de Alfonso --------------------------------*/
-
-
+.containervideos {
+    text-align: left;
+    margin:10px;
+}
+.textelsa, .textsilencio{
+    font-size: 1rem;
+}   
+.textelsa p, .textsilencio p{
+    text-align: center;
+} 
 .videos {
     max-width:1000px;
     margin: 20px;
 }
-
 .videos video {
     width: 100%;
 }
 .videos video:hover {
     cursor: pointer;
-}
-@media screen and (min-width: 810px) {
-    .videos {
-        max-width: 500px;
-        margin: 30px auto;
-    }
 }
 
 /*------------------------------ Novedades ----------------------------------------*/
@@ -419,24 +403,393 @@ h3, h2{
 .poster img {
     width: 100%;
 }
+.wrap{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin: 6%;
+}
+.cabeceranews{
+    text-align: center;
+}
 
 /*------------------------------------ About ---------------------------------------*/
+main{
+height: 90vh;
+}
+
 .about p {
     text-align: center;  
     letter-spacing: 1px;
     line-height: 24px;
 }
 .about a{
-   
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 800;
     transition: all 0.3s ease;
 }
 .about a:hover {
-    color:blue;
+    color: rgba(2,31,37,0.39957990031950286);
 }
-
 .about {
     margin: 10%;
+}
+.fa {
+    padding: 16px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+    height: 59px;
+    width:59px;
+    border-radius: 30px;
+    margin-left: 10px;
+  }
+  .fa-youtube::before{
+    font-size: 30px
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    height: 59px;
+    width:59px;
+    border-radius: 30px;
+    margin-left: 10px;
+  }
+  .fa-instagram::before{
+    font-size: 30px;
+  }
+  .fa-bandcamp{
+    padding:4px 0;
+  }
+  .fa-bandcamp::before{
+    font-size: 56px;
+    margin-left:10px;
+  }
+  .xarxes{
+    display: flex;
+    height: 70px;
+    margin-top: 10px;
+    gap:10%;
+    justify-content: center;
+  }
+  .copi{
+    margin-left:20%;
+    margin-top:43px;
+  }
+ 
+/*--------------------- Thank You Page -----------------------------------*/
+
+
+.checkoutSuccessCtn{
+    font-size:19px;
+    margin:10%;
+}
+
+
+.checkoutSuccessCtn h1 {
+    width:700px;
+    margin-bottom: 14px;
+
+} 
+
+
+
+/*-------------------------------Terms and conditions-------------------------------------*/
+
+
+.TC h1{
+    margin:5%;
+}
+.TC p{
+    
+    margin: 5%;
+}
+.TC a{
+    text-decoration: none;
+    margin: 5%;
+    font-weight: 500;
+}
+.TC a:hover{
+    color: black;
+}
+
+
+
+
+
+/*--------------------MIN WIDTH 810px-----------------*/
+
+
+/*-------------------HOME--------------------*/
+
+@media  screen and (min-width: 810px){
+    .titulos{
+        letter-spacing: 0px;
+    }
+    #texthome {
+        height: 34vh;
+    }
+    
+    #texthome p{
+        display: block;
+        font-size: 40px;
+        font-weight: 500;
+        text-align: left;
+        margin-left: 6%;
+    
+    }
+    #links{
+        display: flex;
+        flex-direction: row;
+        margin-top: 13px;
+        margin-bottom: 3%;
+        height: 51px;
+    }
+    #header {
+        margin-bottom: 61px;
+        margin-top: 55px;
+        margin-left: 95px;
+    }
+   #links .titulos{
+        margin:auto 5%;
+    }
+    footer {
+        margin: 69% auto auto;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+        font-size: initial;
+        font-style: italic;
+    }
+    footer a{
+        margin-bottom: 15px;
+    }
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #070305,
+            0 0 30px #070305;
+        }
+        100% {
+            text-shadow: 0 0 5px #fff, 0 0 10px #07030580, 0 0 20px #07030580, 0 0 30px #07030580;
+        }
+    }
+}
+
+
+/*-----------------TIENDA-----------------*/
+
+@media screen and (min-width: 810px){
+    .cart {
+        margin-right: 4%;
+    }
+    .container {
+        justify-content:space-between;
+        flex-direction: row;
+    }
+    .image {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .TC p{
+        width: 790px;
+    }
+}
+
+/*---------------GRUPOS----------------------*/
+
+@media screen and (min-width: 810px){
+    #cabecera{
+        flex-direction: row;
+        margin-top: 13px;
+        height: 51px;
+        display:flex;
+        margin-bottom: 3%; /*para cabecera about*/
+        background-color: rgba(38, 35, 35, 0.16);
+    }
+    #firselement{
+        margin-left: 96px !important;
+    }
+    #cabecera .titulos{
+        margin: auto 5%;
+    }
+  /*   #silenciosepulcral {
+        margin: auto;
+        width: 455px;
+    }
+     #elsadealfonso {
+        width: 587px;
+        margin:auto;
+    } */
+    .banda{
+         margin: auto 4%
+        /* width: 455px; */
+    }
+    #bandas{
+        margin-top:85px;
+        flex-direction: row;
+    }
+    .containerfoto{
+        margin: auto 5%;
+        max-width: 469px;
+    }
+    
+    #silenciosepulcral h3{
+        margin-left: 22px;
+    }
+    #elsadealfonso h3{
+        margin-left: 28px;
+        
+    }
+    #elsadealfonso h3 span{
+        font-weight: lighter;
+        font-size: 14px;
+        margin-left: 121px;
+    }
+}
+
+/*---------------------SILENCIO SEPULCRAL + ELSA------------------*/
+
+@media screen and (min-width: 810px){
+    .containervideos{
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap; 
+        margin:inherit;  
+        align-items:start; 
+    }
+    .videos {
+        max-width: 400px;
+        margin-left: 84px;
+    }
+    .textelsa, .textsilencio{
+        margin: 1% auto 5% 86.4px;
+        width: 572px;
+    }
+  /*   .textelsa p {
+        display: block;
+        width: 898px;
+        font-size: 50px;
+        font-weight: 500;
+        margin-left:89px;
+        text-align: initial;
+    } */
+    .textsilencio p, .textelsa p{
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: inherit;
+    }
+    .xarxes{
+        gap:65px;
+    }
+    
+    
+}
+
+/*---------------NOVEDADES------------*/
+
+@media screen and (min-width: 810px){
+   
+   
+    .wrap {
+        flex-wrap: wrap;
+        margin:inherit;
+        margin-left: 54px;
+    }
+
+
+    .wrap h2{
+        font-size: 2.5rem;
+        margin-left: 38px;
+    }
+    .wrap h3 {
+        font-size:1.5rem;
+        margin-left: 38px;
+    }
+    .poster{
+        margin: inherit;
+        margin-top:19px;
+        margin-left: 38px;
+        max-width: 400px;
+    }
+    .cabeceranews{
+        text-align: inherit;
+    }
+}
+
+/*------------------ ABOUT --------------------*/
+
+@media screen and (min-width: 810px){
+    #cabecera{
+        width: 100vw;
+    }
+    
+    .about {
+        width: 70%;
+        margin: inherit;
+        margin-left: 4%;
+    }
+    .about a{
+        font-size: 37px;
+    }
+    .about p{
+        /* font-weight: 500; */
+         line-height: 48px; 
+        text-align: inherit;
+        /* width: 898px; */
+        font-size: 40px;
+        /* margin-left: 94px; */
+    }
+    .xarxes{
+        justify-content: initial;
+        margin-top: 74px;
+        margin-left: 100px;
+    }
+}
+
+/*---------------------THANK YOU -------------------*/
+
+@media screen and (min-width: 810px){
+    .checkoutSuccessCtn {   
+        font-size: 50px;
+        font-weight: 500;
+        width: 649px;
+        margin-left: 15%;
+        }
+    }
+
+/*------------- TERMS & CONDITIONS --------------------*/
+
+@media screen and (min-width: 810px){
+    .TC p{
+        width: 790px;
+    }
+}
+
+/*------------------MIN WIDTH 1212px ----- ABOUT --------*/
+
+@media screen and (min-width: 1212px){
+    .about{
+        width: 60%;
+    }
+}
+
+
+/*----------------MIN WIDTH 1365px------------FOOTER ------*/
+
+@media screen and (min-width: 1365px){
+    footer{
+    margin: 22% auto auto;
+    }
 }
