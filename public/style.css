@@ -153,7 +153,7 @@ font-size: 14px;
 }
 footer a {
     text-decoration: none;
-    /* margin: 50px 20px 20px; */
+    margin: auto 5% 5%;
     color: black;
 }
 /* footer p {
@@ -168,8 +168,8 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly; 
-    font-style: italic;
-    font-size: 10px;
+    font-weight: 600;
+    font-size: 20px;
 }   
 #header {
     margin: 5% auto;
@@ -522,6 +522,8 @@ height: 90vh;
 .TC a:hover{
     color: black;
 }
+
+
 
 
 
