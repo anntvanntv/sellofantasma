@@ -170,6 +170,7 @@ footer {
     justify-content: space-evenly; 
     font-weight: 600;
     font-size: 20px;
+   
 }   
 #header {
     margin: 5% auto;
@@ -511,13 +512,14 @@ height: 90vh;
     margin:5%;
 }
 .TC p{
-    
     margin: 5%;
 }
 .TC a{
     text-decoration: none;
-    margin: 5%;
+    
     font-weight: 500;
+    color: grey;
+    margin-bottom: 20px;
 }
 .TC a:hover{
     color: black;
