@@ -396,12 +396,21 @@ h3, h2{
 }
 
 /*------------------------------ Novedades ----------------------------------------*/
-
-.poster {
-    max-width: 500px;
-    margin: auto;
+.textnews{
+    max-width:1000px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+   
+    font-weight: 500;
 }
-.poster img {
+.fotosnews{
+    display: flex;
+    flex-direction: column;
+}
+.foto1, .foto2{
+    max-width:500px;
+}
+.fotosnews img{
     width: 100%;
 }
 .wrap{
@@ -409,6 +418,8 @@ h3, h2{
     flex-direction:column;
     justify-content: center;
     margin: 6%;
+    align-items: start;
+    margin-right:54px;
 }
 .cabeceranews{
     text-align: center;
@@ -550,7 +561,6 @@ height: 90vh;
         font-weight: 500;
         text-align: left;
         margin-left: 6%;
-    
     }
     #links{
         display: flex;
@@ -566,6 +576,9 @@ height: 90vh;
     }
    #links .titulos{
         margin:auto 5%;
+    }
+    .textnews{
+        font-size: 20px;
     }
     footer {
         margin: 69% auto auto;
@@ -607,6 +620,9 @@ height: 90vh;
     }
     .TC p{
         width: 790px;
+    }
+    .fotosnews{
+        flex-direction: row;
     }
 }
 
@@ -708,8 +724,7 @@ height: 90vh;
    
     .wrap {
         flex-wrap: wrap;
-        margin:inherit;
-        margin-left: 54px;
+        margin:inherit 54px;
     }
 
 
