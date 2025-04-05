@@ -1,6 +1,6 @@
 
 exports.termsCtrlFunction = (req, res) => {
-    res.render('terms&conditions');
+    res.render('termsconditions');
 }
 
 
