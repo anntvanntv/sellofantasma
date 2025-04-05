@@ -12,8 +12,11 @@ body, html {
     padding:0;
     box-sizing:border-box;  
     width:100vw;
-    font-family: "Raleway", sans-serif;   
+    font-family: "Raleway", sans-serif;  
+    height: 100%;
+    margin: 0;
 }
+
 
 /*-------------------------- Tienda ------------------------------*/
 .cart {
@@ -288,7 +291,9 @@ footer {
 #bandas{
     display: flex;
     flex-wrap:wrap;
+    
 }
+
 #bandas a{
     text-decoration: none;
 }
@@ -426,9 +431,6 @@ h3, h2{
 }
 
 /*------------------------------------ About ---------------------------------------*/
-main{
-height: 90vh;
-}
 
 .about p {
     text-align: center;  
@@ -577,6 +579,10 @@ height: 90vh;
    #links .titulos{
         margin:auto 5%;
     }
+   .fotosnews{
+    flex-direction: row;
+   }
+    
     .textnews{
         font-size: 20px;
     }

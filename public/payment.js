@@ -7,6 +7,7 @@
 
 stage = 'prod';
 
+
 const host = stage === 'dev' ? 'http://localhost:5000' : 'https://sellofantasma.click';
 
 var stripe = Stripe('pk_live_51PTnDIP1Y1vW4zcv0tWZibKrJlsVX3JCql6GvXkjkASPdui3qwddp0ZRXHL1SNFZR3HK0uHxeyb7ajO0jvhtBAfM00XV1gMdS4');

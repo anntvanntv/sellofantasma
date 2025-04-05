@@ -33,7 +33,7 @@ app.use('/elsa', require('./routes/pages'));
 app.use('/news', require('./routes/pages'));
 app.use('/about', require('./routes/pages'));
 app.use('/checkout', require('./routes/checkout'));
-app.use('/terms&conditions', require('./routes/pages'));
+app.use('/termsconditions', require('./routes/pages'));
 
 app.listen(5000, ()=>{   //4. La funció és per veure el console.log quan comencem el server (start our server)
     console.log("server is running on localhost:5000");
