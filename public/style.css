@@ -139,18 +139,17 @@ font-size: 14px;
     width: 100%;
     margin-top: 100px;   */
 }
-.titulos{
-    margin:5% auto;
+.titulos, .titulos1{
     font-size: 10px;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
 }
-.titulos a{
+.titulos a, .titulos1 a{
     text-decoration: none;
     color:black;
 }
-.atitulos:hover {
+.titulos a:hover, .titulos1 a:hover{
     color:white;
     transition: .2s ease-in-out;
 }
@@ -188,10 +187,10 @@ footer {
 }
 /*---provant glowing text------*/
 #texthome{
-    color: #fff;
-    animation: glow 1s ease-in-out infinite alternate;
+    color: #868585ec;
+   /* animation: glow 1s ease-in-out infinite alternate;*/
 }
-
+/*
 @keyframes glow {
     0% {
         text-shadow: -10px -10px 12px #fff, -10px --10px 14px #fff, 0 0 16px #070305,
@@ -200,7 +199,7 @@ footer {
     100% {
         text-shadow: 0 0 12px #fff, 0 0 14px #07030580, 0 0 16px #07030580, 0 0 18px #07030580;
     }
-}
+}*/
 
 
 
@@ -290,24 +289,23 @@ footer {
 
 #bandas{
     display: flex;
-    flex-wrap:wrap;
-    
+    flex-direction: column;
 }
+
 
 #bandas a{
     text-decoration: none;
 }
-#silenciosepulcral img{
-    width: 100%;
-}
-#elsadealfonso img{
+
+.silenciosepulcral img, .elsadealfonso img, .evripidis img{
     width:100%;
 }
 .banda{
     margin: auto 10%;   
 }
-.banda h3{
+.banda h3, .banda h3 span{
     font-size: 14px;
+    margin-bottom: 60px;
 }
 .banda-text span{
     display:none;
@@ -373,7 +371,7 @@ h3, h2{
     font-size: 11px;
     margin-left: 7px;
 }
-.subtelsa {
+.subtelsa{
     display: flex;
     justify-content: space-between;
 }
@@ -383,10 +381,10 @@ h3, h2{
     text-align: left;
     margin:10px;
 }
-.textelsa, .textsilencio{
+.text{
     font-size: 1rem;
 }   
-.textelsa p, .textsilencio p{
+.text p{
     text-align: center;
 } 
 .videos {
@@ -403,18 +401,31 @@ h3, h2{
 /*------------------------------ Novedades ----------------------------------------*/
 .textnews{
     max-width:1000px;
-    margin-top: 55px;
+    margin-top: 27px;
     margin-bottom: 55px;
-   
     font-weight: 500;
+}
+.news1 h1, .news2 h1{
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
 .fotosnews{
     display: flex;
     flex-direction: column;
 }
-.foto1, .foto2{
+.foto1{
     max-width:500px;
+    align-self: center;
 }
+.subtanna h5, .subtanna span, .subtevrinews span, .subtevrinews h5{
+    margin-bottom:20px;
+    font-size: 14px;
+}
+.subtanna span, .subtevrinews span{
+    font-weight:400;
+}
+
 .fotosnews img{
     width: 100%;
 }
@@ -423,11 +434,19 @@ h3, h2{
     flex-direction:column;
     justify-content: center;
     margin: 6%;
-    align-items: start;
-    margin-right:54px;
+    align-items: center;
 }
 .cabeceranews{
     text-align: center;
+}
+.textnews a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+.textnews a:hover{
+    opacity: 0.6;
 }
 
 /*------------------------------------ About ---------------------------------------*/
@@ -538,9 +557,13 @@ h3, h2{
     color: black;
 }
 
-
-
-
+/* ---------------- MIN WIDTH 428px ------- */
+/*-------------------NEWS-----------*/
+@media screen and (min-width:428px){
+.news2 p, .news1 p, .foto1{
+    max-width:400px;
+}
+}
 
 
 
@@ -560,9 +583,9 @@ h3, h2{
     #texthome p{
         display: block;
         font-size: 40px;
-        font-weight: 500;
+        font-weight: 700;
         text-align: left;
-        margin-left: 6%;
+        margin-left: 91px;
     }
     #links{
         display: flex;
@@ -576,9 +599,7 @@ h3, h2{
         margin-top: 55px;
         margin-left: 95px;
     }
-   #links .titulos{
-        margin:auto 5%;
-    }
+  
    .fotosnews{
     flex-direction: row;
    }
@@ -598,15 +619,7 @@ h3, h2{
     footer a{
         margin-bottom: 15px;
     }
-    @keyframes glow {
-        0% {
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #070305,
-            0 0 30px #070305;
-        }
-        100% {
-            text-shadow: 0 0 5px #fff, 0 0 10px #07030580, 0 0 20px #07030580, 0 0 30px #07030580;
-        }
-    }
+  
 }
 
 
@@ -643,41 +656,33 @@ h3, h2{
         margin-bottom: 3%; /*para cabecera about*/
         background-color: rgba(38, 35, 35, 0.16);
     }
-    #firselement{
-        margin-left: 96px !important;
+  .titulos1{
+        margin: auto 60px auto 91px;
     }
-    #cabecera .titulos{
-        margin: auto 5%;
+   
+    .titulos{
+        margin: auto 60px auto auto;
     }
-  /*   #silenciosepulcral {
-        margin: auto;
-        width: 455px;
+    .sf{
+        line-height: 20px;
     }
-     #elsadealfonso {
-        width: 587px;
-        margin:auto;
-    } */
+  
     .banda{
-         margin: auto 4%
-        /* width: 455px; */
-    }
+        margin: auto 91px;
+      }
     #bandas{
         margin-top:85px;
         flex-direction: row;
+        flex-wrap:wrap; 
     }
+  
     .containerfoto{
-        margin: auto 5%;
         max-width: 469px;
     }
-    
-    #silenciosepulcral h3{
-        margin-left: 22px;
-    }
-    #elsadealfonso h3{
-        margin-left: 28px;
-        
-    }
-    #elsadealfonso h3 span{
+    .banda .subtsilencio h3, .banda .subtelsa h3, .banda .subtevri h3{
+        margin-bottom: 100px;
+    } 
+    .banda h3 span{
         font-weight: lighter;
         font-size: 14px;
         margin-left: 121px;
@@ -698,19 +703,12 @@ h3, h2{
         max-width: 400px;
         margin-left: 84px;
     }
-    .textelsa, .textsilencio{
+    .text{
         margin: 1% auto 5% 86.4px;
         width: 572px;
     }
-  /*   .textelsa p {
-        display: block;
-        width: 898px;
-        font-size: 50px;
-        font-weight: 500;
-        margin-left:89px;
-        text-align: initial;
-    } */
-    .textsilencio p, .textelsa p{
+
+    .text p{
         display: block;
         font-size: 20px;
         font-weight: 500;
@@ -718,6 +716,7 @@ h3, h2{
     }
     .xarxes{
         gap:65px;
+        transition: all 0.1s ease-in-out;
     }
     
     
@@ -727,13 +726,11 @@ h3, h2{
 
 @media screen and (min-width: 810px){
    
-   
     .wrap {
         flex-wrap: wrap;
-        margin:inherit 54px;
+        margin:54px;
+        align-items: start;
     }
-
-
     .wrap h2{
         font-size: 2.5rem;
         margin-left: 38px;
@@ -751,6 +748,28 @@ h3, h2{
     .cabeceranews{
         text-align: inherit;
     }
+    .news1, .news2{
+        display:flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .news1 h1, .news2 h1{
+        font-size: 45px;
+        margin-bottom:20px;
+    }
+    .news1 p, .news2 p{
+        align-self: start;
+        margin-right: 50px;
+        max-width: 800px;
+        font-size:39px;
+        font-weight:400;
+    }
+    .textnews{
+        display:flex;
+        flex-direction: row-reverse;
+        max-width:inherit;
+    }
+
 }
 
 /*------------------ ABOUT --------------------*/

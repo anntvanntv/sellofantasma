@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Grupos</title>
 </head>
+
 <body>
     <main>
-        <div id="header">  
-            <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg" ></a>
+        <div id="header">
+            <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
         </div> <!---header-->
         <div id="cabecera"> <!---links-->
-                <div class="titulos"><a href="/" class="atitulos"><p>Home</p></div></a>
-                <div class="titulos"><a href="/grupos" class="atitulos"><p>Grupos</p></div></a>
-                <div class="titulos"><a href="/index" class="atitulos"><p>Tienda</p></div></a>
-                <div class="titulos"><a href="/news" class="atitulos"><p>Novedades</p></div></a>
-                <div class="titulos"><a href="/about" class="atitulos"><p>Sello Fantasma</p></div></a>
+            <div class="titulos1"><a href="/">
+                    <p>Home</p>
+            </div></a>
+            <div class="titulos"><a href="/grupos">
+                    <p>Grupos</p>
+            </div></a>
+            <div class="titulos"><a href="/index">
+                    <p>Tienda</p>
+            </div></a>
+            <div class="titulos"><a href="/news">
+                    <p>Novedades</p>
+            </div></a>
+            <div class="titulos sf"><a href="/about">
+                    <p>Sello Fantasma</p>
+            </div></a>
         </div> <!--cabecera--->
-        
+
         <div id="bandas">
-            <div class="banda" id="silenciosepulcral">
+             <div class="banda evripidis">
                 <div class="containerfoto">
-                    <img class="imagen" src="images/SilencioSepulcralLigero.jpg" alt="silencio-sepulcral-caratula">                    
+                    <img class="imagen" src="images/evriportadagrupos.jpg" alt="alegre-persona-triste-caratula">
                     <div class="overlay">
                         <div class="texto">Entra</div>
-                        <a href="/silenciosepulcral"></a>
+                        <a href="/evripidisandhistragedies"></a>
                     </div>
                 </div><!--containerfoto-->
-            <h3> Silencio Sepulcral </h3>    
+                <div class="subtevri">
+                    <h3>Evripidis and His Tragedies</h3>
+                </div>
             </div>
-            <div class="banda" id="elsadealfonso">
+              <div class="banda elsadealfonso">
                 <div class="containerfoto">
                     <picture class="imagen">
                         <source media="(min-width: 810px)" srcset="images/Elsa_Jaume.jpeg" alt="Elsa">
@@ -42,35 +56,49 @@
                     </picture>
                     <div class="overlay">
                         <div class="texto">Entra</div>
-                        <a href="/elsa"></a>                    
+                        <a href="/elsa"></a>
                     </div>
-                 
-                    
-                
-                 </div>
-                <div class="subtelsa">
-                <h3>Elsa de Alfonso <span>&copy;Foto: Jordi Marín</span></h3>
                 </div>
-
+                <div class="subtelsa">
+                    <h3>Elsa de Alfonso <span>&copy;Foto: Jordi Marín</span></h3>
+                </div>
             </div>
-        
+            <div class="banda silenciosepulcral">
+                <div class="containerfoto">
+                    <img class="imagen" src="images/SilencioSepulcralLigero.jpg" alt="silencio-sepulcral-caratula">
+                    <div class="overlay">
+                        <div class="texto">Entra</div>
+                        <a href="/silenciosepulcral"></a>
+                    </div>
+                </div><!--containerfoto-->
+                <div class="subtsilencio">
+                    <h3>Silencio Sepulcral</h3>
+                </div>
+            </div>
+          
+           
         </div>
+
+
     </main>
     <footer>
-        
+
         <p> &copy Sello fantasma</p>
-         <a href="/">Home</a>
+        <a href="/">Home</a>
         <a href="/grupos">Grupos</a>
         <a href="/index">Tienda</a>
         <a href="/news">Novedades</a>
         <a href="/about">About</a>
         <a href="/termsconditions">Terms and conditions</a>
     </footer>
-    
+
 </body>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/main.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+    integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/main.js"></script>
+
 </html>

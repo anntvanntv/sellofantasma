@@ -19,6 +19,9 @@ exports.elsaCtrlFunction = (req, res) => {
 exports.silsepCtrlFunction = (req, res) => {
     res.render('silenciosepulcral');
 }
+exports.evriCtrlFunction = (req, res) => {
+    res.render('evripidisandhistragedies');
+}
 
 exports.gruposCtrlFunction = (req, res) => {
     res.render('grupos');
