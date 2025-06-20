@@ -129,15 +129,7 @@ font-size: 14px;
 }
 #links{
     display: none;
-   /*  display: flex;*/
     background-color:rgba(38, 35, 35, 0.16)
-   /* margin:5% auto;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    width: 100%;
-    margin-top: 100px;   */
 }
 .titulos, .titulos1{
     font-size: 10px;
@@ -158,9 +150,7 @@ footer a {
     margin: auto 5% 5%;
     color: black;
 }
-/* footer p {
-    margin: auto 20px 20px;
-} */
+
 footer a:hover {
     color: rgba(19, 24, 1, 0.356);
 }
@@ -185,22 +175,10 @@ footer {
     margin-top: 55px;
     font-size: 20px;
 }
-/*---provant glowing text------*/
+
 #texthome{
     color: #868585ec;
-   /* animation: glow 1s ease-in-out infinite alternate;*/
 }
-/*
-@keyframes glow {
-    0% {
-        text-shadow: -10px -10px 12px #fff, -10px --10px 14px #fff, 0 0 16px #070305,
-        0 0 18px #070305;
-    }
-    100% {
-        text-shadow: 0 0 12px #fff, 0 0 14px #07030580, 0 0 16px #07030580, 0 0 18px #07030580;
-    }
-}*/
-
 
 
 /*---------------------- CART PAGE ------------------------*/
@@ -221,7 +199,6 @@ footer {
     max-width: 650px;
     display: flex;
     justify-content: flex-start;
-    /* border-bottom: 4px solid lightgray; */
     margin: 0 auto;
 }
 .product-header h5 {
@@ -232,13 +209,11 @@ footer {
 }
 .price {
     width: 15%;
-    /* border-bottom: 4px solid lightgray; */
     display:flex;
     align-items: center;
 }
 .quantity {
     width: 30%;
-    /* border-bottom: 1px solid lightgray; */
     display: flex;
     align-items: center;
 }
@@ -248,9 +223,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
-    /* border-bottom: 1px solid lightgray; */
 }
-
 .productincart img {
     width: 25%;
 }
@@ -291,12 +264,9 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-
 #bandas a{
     text-decoration: none;
 }
-
 .silenciosepulcral img, .elsadealfonso img, .evripidis img{
     width:100%;
 }
@@ -376,27 +346,32 @@ h3, h2{
     justify-content: space-between;
 }
 
-/*----------------------- Silencio sepulcral Elsa de Alfonso --------------------------------*/
+/*----------------------- Silencio sepulcral Elsa de Alfonso Imperio--------------------------------*/
 .containervideos {
-    text-align: left;
-    margin:10px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
 .text{
     font-size: 1rem;
-}   
+}  
 .text p{
-    text-align: center;
+    width: 300px;
 } 
 .videos {
     max-width:1000px;
-    margin: 20px;
+    margin: 0px;
 }
+
 .videos video {
     width: 100%;
 }
 .videos video:hover {
     cursor: pointer;
 }
+
+
 
 /*------------------------------ Novedades ----------------------------------------*/
 .textnews{
@@ -405,7 +380,7 @@ h3, h2{
     margin-bottom: 55px;
     font-weight: 500;
 }
-.news1 h1, .news2 h1{
+.news h1{
     line-height: 30px;
     text-align: center;
     margin-top: 20px;
@@ -439,6 +414,9 @@ h3, h2{
 .cabeceranews{
     text-align: center;
 }
+.news p{
+    max-width: 415px;
+}
 .textnews a{
     text-decoration: none;
     color: black;
@@ -447,6 +425,9 @@ h3, h2{
 }
 .textnews a:hover{
     opacity: 0.6;
+}
+.foto1.tres {
+    margin-bottom: 30px;
 }
 
 /*------------------------------------ About ---------------------------------------*/
@@ -496,7 +477,7 @@ h3, h2{
     height: 59px;
     width:59px;
     border-radius: 30px;
-    margin-left: 10px;
+    margin-left: 0px;
   }
   .fa-instagram::before{
     font-size: 30px;
@@ -506,15 +487,24 @@ h3, h2{
   }
   .fa-bandcamp::before{
     font-size: 56px;
-    margin-left:10px;
+    margin-left:0px;
   }
   .xarxes{
+    flex-wrap: wrap;
     display: flex;
     height: 70px;
     margin-top: 10px;
     gap:10%;
     justify-content: center;
+    align-items: center;
   }
+  /* .fa-vimeo::before{
+    background-color: #551a8b;
+    color: #fff;
+    padding: 13px;
+    border-radius: 30px;
+} */
+
   .copi{
     margin-left:20%;
     margin-top:43px;
@@ -560,10 +550,19 @@ h3, h2{
 /* ---------------- MIN WIDTH 428px ------- */
 /*-------------------NEWS-----------*/
 @media screen and (min-width:428px){
-.news2 p, .news1 p, .foto1{
+.news p .foto1{
     max-width:400px;
 }
 }
+@media screen and (min-width:500px){
+    .news p{
+        max-width: 500px;
+        font-size:23px;
+    }
+}
+
+    
+
 
 
 
@@ -693,11 +692,11 @@ h3, h2{
 
 @media screen and (min-width: 810px){
     .containervideos{
-        display:flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap:wrap; 
         margin:inherit;  
         align-items:start; 
+        align-items: left;
     }
     .videos {
         max-width: 400px;
@@ -713,6 +712,7 @@ h3, h2{
         font-size: 20px;
         font-weight: 500;
         text-align: inherit;
+        width:500px;
     }
     .xarxes{
         gap:65px;
@@ -748,22 +748,25 @@ h3, h2{
     .cabeceranews{
         text-align: inherit;
     }
-    .news1, .news2{
+    .news{
         display:flex;
         flex-direction: column;
         align-items: baseline;
     }
-    .news1 h1, .news2 h1{
+    .news h1{
         font-size: 45px;
         margin-bottom:20px;
+        line-height: 55px;
     }
-    .news1 p, .news2 p{
+    .news p{
         align-self: start;
         margin-right: 50px;
-        max-width: 800px;
+        max-width: 400px;
         font-size:39px;
         font-weight:400;
     }
+    
+
     .textnews{
         display:flex;
         flex-direction: row-reverse;
@@ -821,6 +824,13 @@ h3, h2{
     }
 }
 
+/*-------------------MIN-WIDTH 1000px --------NEWS-----------------------*/
+@media screen and (min-width:1000px){
+    .news p{
+        max-width:600px;
+    }
+}
+
 /*------------------MIN WIDTH 1212px ----- ABOUT --------*/
 
 @media screen and (min-width: 1212px){
@@ -836,4 +846,13 @@ h3, h2{
     footer{
     margin: 22% auto auto;
     }
+}
+
+/*---------------MIN WIDTH 1380px-------------NEWS--------*/
+
+@media screen and (min-width: 1380px) {
+    .news p{
+        max-width: 800px;
+    }
+    
 }

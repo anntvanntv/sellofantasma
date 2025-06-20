@@ -23,6 +23,10 @@ exports.evriCtrlFunction = (req, res) => {
     res.render('evripidisandhistragedies');
 }
 
+exports.impeCtrlFuncion = ( req, res) => {
+    res.render('imperio');
+}
+
 exports.gruposCtrlFunction = (req, res) => {
     res.render('grupos');
 }
