@@ -7,6 +7,8 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"> <link rel="stylesheet" href="/style.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
+    <link rel="stylesheet" href="style.css">
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Carrito</title>
@@ -17,14 +19,17 @@
             
            <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg" ></a>
         </div> <!---#header-->
-
-        <div id="cabecera"> <!---links-->
-                <div class="titulos1"><a href="/"><p>Home</p></div></a>
-                <div class="titulos"><a href="/grupos"><p>Grupos</p></div></a>
-                <div class="titulos"><a href="/index"><p>Tienda</p></div></a>
-                <div class="titulos"><a href="/news"><p>Novedades</p></div></a>
-                <div class="titulos sf"><a href="/about"><p>Sello Fantasma</p></div></a>
-        </div> <!--cabecera--->
+        <div class="links">
+            <span id="menu-icon" class="material-symbols-outlined" onClick=myHamburger()>menu</span>
+            <div id="link-block">
+            
+                        <div class="titulos"><a href="/">Sello Fantasma</a></div>
+                        <div class="titulos"><a href="/grupos">Grupos</a></div>
+                        <div class="titulos"><a href="/index">Tienda</a></div>
+                        <div class="titulos"><a href="/news">Novedades</a></div>
+                
+            </div> 
+        </div>
  
         <div class="cart">
             <a href="/cart">
@@ -45,20 +50,16 @@
         </div>
         
     </div>
-        <div class="buyBtnCtn">
-            <button id="startCheckout" class="startCheckout">Start Checkout</button>
+    <div class="buyBtnCtn">
+        <button id="startCheckout" class="startCheckout">Start Checkout</button>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <p>&copy Sello fantasma 2025</p>
+            <a href="/termsconditions">Terms and conditions</a>
         </div>
-    
-
-
-       <footer>
-        <p> &copy Sello fantasma</p>
-        <a href="/">Home</a>
-        <a href="/grupos">Grupos</a>
-        <a href="/index">Tienda</a>
-        <a href="/news">Novedades</a>
-        <a href="/about">Sello fantasma</a>
-    
+       
     </footer>
 
 
@@ -68,6 +69,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/main.js"></script>
     <script src="/payment.js"></script>
+    <script src="/script.js"></script>
 
 </body>
 </html>

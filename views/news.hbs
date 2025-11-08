@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="/path/to/@material-design-icons/font/index.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/Fantasma favicon.png">
     <title>Novedades</title>
@@ -15,31 +18,47 @@
 <body>
 
 
-    <div id="container">
+    <main>
 
-        <div id="header"><!---header-->
-
+        <div id="header">
             <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
-        </div> <!---header-->
-        <div id="cabecera"> <!---links-->
-            <div class="titulos1"><a href="/">
-                    <p>Home</p>
-            </div></a>
-            <div class="titulos"><a href="/grupos">
-                    <p>Grupos</p>
-            </div></a>
-            <div class="titulos"><a href="/index">
-                    <p>Tienda</p>
-            </div></a>
-            <div class="titulos"><a href="/news">
-                    <p>Novedades</p>
-            </div></a>
-            <div class="titulos sf"><a href="/about">
-                    <p>Sello Fantasma</p>
-            </div></a>
-        </div> <!--cabecera--->
+        </div>
+        <div class="links">
+            <span id="menu-icon" class="material-symbols-outlined" onClick=myHamburger()>menu</span>
+            <div id="link-block">
+
+                <div class="titulos"><a href="/">Sello Fantasma</a></div>
+                <div class="titulos"><a href="/grupos">Grupos</a></div>
+                <div class="titulos"><a href="/index">Tienda</a></div>
+                <div class="titulos"><a href="/news">Novedades</a></div>
+
+            </div>
+        </div>
         <div class="wrap">
-         {{!--    <div class="news cuatro">
+            <div class="news">
+                <h1>Nuevo videoclip realizado por Oro y Plata</h1>
+        
+                <div class="textnews">
+                    
+                        <div class="videos noticias">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/RcQ8fajelvc?si=lxBrU3kzOVWXpRwE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            
+                        
+
+
+                    </div>
+                    <p>Ya puedes ver el último videoclip de Imperio para la Canción pop de la amistad realizado por Oro
+                        y Plata. Ani Caballero y Jordi Marin son los artistas detrás de la cámara. Puedes ver todos sus
+                        vídeos en el canal de youtube.</p>
+                </div>
+                
+
+            </div>
+            {{!-- <div class="news cuatro">
                 <h1>Sofia Cardich + Elsa de Alfonso + Ellegalgo</h1>
                 <div class="textnews dos">
                     <div class="fotosnews dos">
@@ -52,7 +71,8 @@
 
 
                     </div>
-                    <p>Este jueves 4 de septiembre nuestra <a href="https://sellofantasma.click/elsa" target="_blank">Elsa de
+                    <p>Este jueves 4 de septiembre nuestra <a href="https://sellofantasma.click/elsa"
+                            target="_blank">Elsa de
                             Alfonso</a> toca junto a Sofia Cardich y Ellegalgo apartir de las 19:30 en Rouge Cocktail
                         Club. Compra tu entrada ahora y gozarás no solo de un <a target="_blank"
                             href="https://dice.fm/event/mxr9qr-sofia-cardich-elsa-de-alfonso-ellegalgo-4th-sep-rouge-cocktail-club-barcelona-tickets?sharer_id=61e9bffed82f6b0001a13942&_branch_match_id=1491432926130777991&utm_source=dice&utm_campaign=event_share&utm_medium=event_share&_branch_referrer=H4sIAAAAAAAAAw3ISw5AMBAA0NtY9oMIErGTOIHEplGdYfwzbcLK2XnLN4dw%2BVLKjY5VOBpB4C6nK82bPrRLZ2s%2FDwxsyFWZhsIigstjzKxSSg86KdI4ehkQmOmYjOXz9sBVQ%2F%2BdzwdnWW2yXgAAAA%3D%3D">descuento
@@ -60,7 +80,7 @@
                 </div>
 
             </div> <!---news2---> --}}
-            <div class="news tres">
+            {{!-- <div class="news tres">
                 <h1>BIS Festival<br> Lidia Damunt + Imperio</h1>
                 <div class="textnews tres">
 
@@ -78,8 +98,8 @@
                                 tu entrada.</a></em> No te quedes sin ella.</p>
                 </div>
 
-            </div> <!---news1--->
-           {{!--  <div class="news uno">
+            </div> --}}<!---news1--->
+            {{!-- <div class="news uno">
                 <h1>Nueva trilogía de Imperio</h1>
                 <div class="textnews uno">
 
@@ -97,7 +117,7 @@
                 </div>
 
             </div> <!---news1---> --}}
-           {{!--  <div class="news dos">
+            {{!-- <div class="news dos">
                 <h1>Las rarezas de Evripidis</h1>
                 <div class="textnews dos">
                     <div class="fotosnews dos">
@@ -129,21 +149,16 @@
 
             </div> --}} <!---news2--->
 
-        </div> <!---wrap-->
+    </main> <!---wrap-->
 
 
-        <footer>
-            <p>&copy Sello fantasma</p>
-            <a href="/">Home</a>
-            <a href="/grupos">Grupos</a>
-            <a href="/index">Tienda</a>
-            <a href="/news">Novedades</a>
-            <a href="/about">About</a>
+    <footer>
+        <div class="footer">
+            <p>&copy Sello fantasma 2025</p>
             <a href="/termsconditions">Terms and conditions</a>
+        </div>
 
-
-        </footer>
-
+    </footer>
 </body>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -152,5 +167,6 @@
     integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/main.js"></script>
+<script src="/script.js"></script>
 
 </html>

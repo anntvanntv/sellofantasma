@@ -5,54 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
-    <title>Sello Fantasma</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+ 
+    
+    <title>Home</title>
 </head>
 <body>
-
-
-    <div id="container">
-
-        <div id="header"><!---header-->
-            
-           <a href="#"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
-        </div> <!---header-->
-
-        <div id="links"> <!---links-->
+    <main>
         
-                <div class="titulos1" id="firstelement"><a href="/">Home</a></div>
-                <div class="titulos"><a href="/grupos">Grupos</a></div>
-                <div class="titulos"><a href="/index">Tienda</a></div>
-                <div class="titulos"><a href="/news">Novedades</a></div>
-                <div class="titulos sf"><a href="/about">Sello Fantasma</a></div>
+        <div id="header">
+            
+           <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
         </div>
-
-        <div id="texthome">
-            <p>Vamos a sacar tus canciones favoritas</p>
-
+        <div class="links">
+            <span id="menu-icon" class="material-symbols-outlined" onClick=myHamburger()>menu</span>
+            <div id="link-block">
+            
+                        <div class="titulos"><a href="/">Sello Fantasma</a></div>
+                        <div class="titulos"><a href="/grupos">Grupos</a></div>
+                        <div class="titulos"><a href="/index">Tienda</a></div>
+                        <div class="titulos"><a href="/news">Novedades</a></div>
+                
+            </div> 
         </div>
-      
-    </div> <!---container-->
-
+        <div class="about">
+            <p>Sello fantasma es una discográfica nacida en 2023. Se creó con la intención de publicar las canciones de Silencio sepulcral. 
+               Nos supo a poco, así que decidimos publicar también el último disco de Elsa de Alfonso. Aun con ganas de más, seguiremos publicando 
+               y compartiendo música. Si tenéis algo que decir, podéis escribirnos a nuestra dirección de correo electrónico.
+               <a href="mailto: sello.fantasma.rt@gmail.com">sello.fantasma.rt@gmail.com</a></p>
+        
+        </div>
+       <div class="xarxes">
+        <a href="https://www.youtube.com/@SelloFantasma-music" class="fa fa-youtube" target="_blank"></a>
+        <a href="https://www.instagram.com/sello.fantasma/" class="fa fa-instagram" target="_blank"></a>
+        <a href="https://sellofantasma.bandcamp.com/" target="_blank" class="fa fa-bandcamp"></a>
+                 
     
+        
+       </div>
+       
+        
+        
+
+    </main>
     <footer>
-        <p> &copy Sello fantasma</p>
-        <a href="/grupos">Grupos</a>
-        <a href="/index">Tienda</a>
-        <a href="/news">Novedades</a>
-        <a href="/about">About</a>
-        <a href="/termsconditions">Terms and conditions</a>
-    
+        <div class="footer">
+            <p>&copy Sello fantasma 2025</p>
+            <a href="/termsconditions">Terms and conditions</a>
+        </div>
+       
     </footer>
     
-    {{!-- <script type="text/javascript" src="https://app.termly.io/resource-blocker/b5b66d6c-2207-42a6-9982-eb16c1abc6e5?autoBlock=on"></script> --}}
 </body>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/main.js"></script>
+    <script src="/script.js"></script>
 </html>

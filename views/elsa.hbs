@@ -9,37 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Elsa de Alfonso</title>
 </head>
 
 <body>
-    <div id="container">
-
-        <div id="header"><!---header-->
-
+    <main>
+        <div id="header">
             <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
-        </div> <!---header-->
+        </div> 
 
-        <div id="cabecera"> <!---links-->
-            <div class="titulos1"><a href="/">
-                    <p>Home</p>
-            </div></a>
-            <div class="titulos"><a href="/grupos">
-                    <p>Grupos</p>
-            </div></a>
-            <div class="titulos"><a href="/index">
-                    <p>Tienda</p>
-            </div></a>
-            <div class="titulos"><a href="/news">
-                    <p>Novedades</p>
-            </div></a>
-            <div class="titulos sf"><a href="/about">
-                    <p>Sello Fantasma</p>
-            </div></a>
-        </div> <!--cabecera--->
-
+         <div class="links">
+            <span id="menu-icon" class="material-symbols-outlined" onClick=myHamburger()>menu</span>
+            <div id="link-block">
+                    <div class="titulos"><a href="/">Sello Fantasma</a></div>
+                    <div class="titulos"><a href="/grupos">Grupos</a></div>
+                    <div class="titulos"><a href="/index">Tienda</a></div>
+                    <div class="titulos"><a href="/news">Novedades</a></div>
+            </div>
+        </div> 
         <div class="containervideos">
             <div class="videos">
                 <iframe width="auto" height="315" src="https://www.youtube.com/embed/xqbiVSvPVos?si=46qQTNNVQ9DyWh8h"
@@ -48,14 +38,14 @@
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="text elsa">
-                <p>Elsa de Alfonso, artista barcelonesa, cuenta con varios discos publicados. Su último lanzamiento, el
+                <p><strong><a style="text-decoration: none; color:black;" href="https://elsadealfonso.bandcamp.com/" target="_blank">Elsa de Alfonso</a></strong>, artista barcelonesa, cuenta con varios discos publicados. Su último lanzamiento, el
                     EP Crucero, salió a la luz a principios de 2024, ha sido coproducido con EJ Marais. Este EP, citando
                     a Elsa, "es un viaje
                     emocional y musical a través de archipiélagos de samples, corrientes sintéticas y oleaje de
                     guitarras".
                 </p>
             </div>
-        </div> <!--container videos-->
+        </div> 
         <div class="xarxes">
             <a href="https://www.youtube.com/@elsadealfonso712" title="youtube de Elsa" class="fa fa-youtube"
                 target="_blank"></a>
@@ -65,15 +55,12 @@
                 class="fa fa-bandcamp"></a>
         </div>
 
-
-    </div> <!---container-->
-    <footer>
-        <p>&copy Sello fantasma 2024</p>
-        <a href="/">Home</a>
-        <a href="/grupos">Grupos</a>
-        <a href="/index">Tienda</a>
-        <a href="/news">Novedades</a>
-        <a href="/about">About/Impressum</a>
+    </main>
+     <footer>
+        <div class="footer">
+            <p>&copy Sello fantasma 2025</p>
+            <a href="/termsconditions">Terms and conditions</a>
+        </div>
     </footer>
 </body>
 
@@ -83,5 +70,6 @@
     integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/main.js"></script>
+<script src="/script.js"></script>
 
 </html>

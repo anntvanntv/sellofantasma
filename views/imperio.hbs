@@ -9,46 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Imperio</title>
 </head>
 
 <body>
-    <div id="container">
+    <main>
 
-        <div id="header"><!---header-->
-
+        <div id="header">
             <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
-        </div> <!---header-->
+        </div>
 
-        <div id="cabecera"> <!---links-->
-            <div class="titulos1"><a href="/">
-                    <p>Home</p>
-            </div></a>
-            <div class="titulos"><a href="/grupos">
-                    <p>Grupos</p>
-            </div></a>
-            <div class="titulos"><a href="/index">
-                    <p>Tienda</p>
-            </div></a>
-            <div class="titulos"><a href="/news">
-                    <p>Novedades</p>
-            </div></a>
-            <div class="titulos sf"><a href="/about">
-                    <p>Sello Fantasma</p>
-            </div></a>
-        </div> <!--cabecera--->
+        <div class="links">
+            <span id="menu-icon" class="material-symbols-outlined" onClick=myHamburger()>menu</span>
+            <div id="link-block">
+                <div class="titulos"><a href="/">Sello Fantasma</a></div>
+                <div class="titulos"><a href="/grupos">Grupos</a></div>
+                <div class="titulos"><a href="/index">Tienda</a></div>
+                <div class="titulos"><a href="/news">Novedades</a></div>
+            </div>
+        </div>
 
         <div class="containervideos">
             <div class="videos">
-                <iframe style="border: 0; width: 350px; height: 470px;"
-                    src="https://bandcamp.com/EmbeddedPlayer/album=2872104054/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-                    seamless><a href="https://imperio.bandcamp.com/album/despedidas-y-reencuentros-2">Despedidas y
-                        reencuentros by Imperio</a></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RcQ8fajelvc?si=lxBrU3kzOVWXpRwE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="text imperio">
-                <p>Imperio, el proyecto íntimo y lo-fi de Anna Taulés (Barcelona/Berlín). Desde su debut en 2012 ha
+                <p><strong><a style="text-decoration: none; color:black;" href="https://imperio.bandcamp.com/" target="_blank">Imperio</a></strong>, el proyecto íntimo y lo-fi de Anna Taulés (Barcelona/Berlín). Desde su debut en 2012 ha
                     cultivado un estilo muy personal con una producción minimalista. Cuenta von varios álbumes y EPs
                     publicados. Sello Fantasma presenta su último EP "Despedidas y reencuentros".
                 </p>
@@ -66,14 +59,12 @@
         </div>
 
 
-    </div> <!---container-->
+    </main>
     <footer>
-        <p>&copy Sello fantasma 2024</p>
-        <a href="/">Home</a>
-        <a href="/grupos">Grupos</a>
-        <a href="/index">Tienda</a>
-        <a href="/news">Novedades</a>
-        <a href="/about">About/Impressum</a>
+        <div class="footer">
+            <p>&copy Sello fantasma 2025</p>
+            <a href="/termsconditions">Terms and conditions</a>
+        </div>
     </footer>
 </body>
 
@@ -83,5 +74,6 @@
     integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/main.js"></script>
+<script src="/script.js"></script>
 
 </html>

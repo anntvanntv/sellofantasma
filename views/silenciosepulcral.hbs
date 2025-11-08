@@ -9,45 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close,menu" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Fantasma favicon.png">
     <title>Silencio Sepulcral</title>
 </head>
 
 <body>
-    <div id="container">
-
-        <div id="header"><!---header-->
-
+    <main>
+        <div id="header">
             <a href="/"> <img id="sello-on-the-top" alt="sello-fantasma" src="images/LogoNegre.svg"></a>
-        </div> <!---header-->
-        <div id="cabecera"> <!---links-->
-            <div class="titulos1" id="firselement"><a href="/">
-                    <p>Home</p>
-            </div></a>
-            <div class="titulos"><a href="/grupos">
-                    <p>Grupos</p>
-            </div></a>
-            <div class="titulos"><a href="/index">
-                    <p>Tienda</p>
-            </div></a>
-            <div class="titulos"><a href="/news">
-                    <p>Novedades</p>
-            </div></a>
-            <div class="titulos sf"><a href="/about">
-                    <p>Sello Fantasma</p>
-            </div></a>
-        </div> <!--cabecera--->
+        </div>
+        <div class="links">
+            <span id="menu-icon" class="material-symbols-outlined" onClick=myHamburger()>menu</span>
+            <div id="link-block">
+                    <div class="titulos pl"><a href="/">Sello Fantasma</a></div>
+                    <div class="titulos"><a href="/grupos">Grupos</a></div>
+                    <div class="titulos"><a href="/index">Tienda</a></div>
+                    <div class="titulos"><a href="/news">Novedades</a></div>
+            </div>
+        </div> 
 
         <div class="containervideos">
-            <div class="videos"{{!--  id="uno" --}}>
-                <iframe width="auto" height="315" src="https://www.youtube.com/embed/8pY948T3Xtc?si=sUa5OBh9BO2seu_p"
-                    title="YouTube video player" frameborder="0"
+            <div class="videos">
+                <iframe src="https://www.youtube.com/embed/8pY948T3Xtc?si=sUa5OBh9BO2seu_p" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="text silencio">
-                <p>Silencio Sepulcral es el dúo formado por Marc y Anna, quienes en esta ocasión se dedican a componer
+                <p><strong><a style="text-decoration: none; color:black;"
+                            href="https://silenciosepulcralma.bandcamp.com/album/silencio-sepulcral"
+                            target="_blank">Silencio Sepulcral</a></strong> es el dúo formado por Marc Ribera (Doble
+                    Pletina) y Anna Taulés (Imperio), quienes en esta ocasión se dedican a componer
                     canciones para que sean interpretadas por otras personas.</p>
             </div>
 
@@ -57,7 +50,7 @@
                     <source src="videos/1. Todavía hace calor - fantasma.webm">
                 </video>
             </div> --}}
-        </div><!--container videos-->
+        </div>
 
         <div class="xarxes">
             <a href="https://www.youtube.com/@SelloFantasma-music" title="youtube de Sello fantasma"
@@ -68,16 +61,13 @@
                 title="bandcamp de Silencio sepulcral" target="_blank" class="fa fa-bandcamp"></a>
         </div>
 
-    </div> <!---container-->
+        </div> 
+    </main>
     <footer>
-        <p>&copy Sello fantasma</p>
-        <a href="/">Home</a>
-        <a href="/grupos">Grupos</a>
-        <a href="/index">Tienda</a>
-        <a href="/news">Novedades</a>
-        <a href="/about">About</a>
-        <a href="/termsconditions">Terms and conditions</a>
-
+        <div class="footer">
+            <p>&copy Sello fantasma 2025</p>
+            <a href="/termsconditions">Terms and conditions</a>
+        </div>
     </footer>
 </body>
 
@@ -87,5 +77,6 @@
     integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/main.js"></script>
+<script src="/script.js"></script>
 
 </html>
