@@ -58,12 +58,7 @@ a:hover {
   #link-block.active {
     transform: translateY(0);
   }
-  #link-block:hover .titulos a { 
-    opacity: 0;
-  }
-  #link-block .titulos a:hover {
-    opacity: 1;
-  }
+
     
 
 
@@ -678,7 +673,12 @@ h3, h2{
 @media  screen and (min-width: 810px){
 
     /*------------- H MENU (ALL)---------------------*/
-
+    #link-block:hover .titulos a { 
+        opacity: 0;
+      }
+      #link-block .titulos a:hover {
+        opacity: 1;
+      }
     #menu-icon {
         display: none;
     }
