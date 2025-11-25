@@ -451,12 +451,14 @@ h3, h2{
     margin-bottom: 55px;
     font-weight: 500;
 }
-/* .news {
-    margin-left: 6px;
-} */
+.news.oroplata {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .news h1{
     line-height: 30px;
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
 }
 .fotosnews{
@@ -464,8 +466,10 @@ h3, h2{
     flex-direction: column;
 }
 .foto1{
-    max-width:500px;
-    align-self: center;
+    max-width:450px;
+}
+.videos.noticias {
+    right:0px;
 }
 .subtanna h5, .subtanna span, .subtevrinews span, .subtevrinews h5{
     margin-bottom:20px;
@@ -502,9 +506,7 @@ h3, h2{
 .textnews a:hover{
     opacity: 0.6;
 }
-.foto1.tres {
-    margin-bottom: 30px;
-}
+
 
 /*------------------------------------ About ---------------------------------------*/
 
@@ -657,6 +659,9 @@ h3, h2{
         width: 80%;
         padding-bottom: 80%;
         right: 65px;
+    }
+    .videos.noticias {
+        right: 50px;
     }
     .text p {
         width: 80%;
@@ -878,7 +883,16 @@ h3, h2{
         font-weight:400;
     }
     
-
+        .textnews.tres p {
+            padding-right: 70px;
+        }
+        .foto1 {
+            max-width: 350px;
+          }
+        .foto1.tres {
+            margin-left: -42px;
+          }
+    
     .textnews{
         display:flex;
         flex-direction: row-reverse;
@@ -962,6 +976,18 @@ h3, h2{
     .fa-solid {
         margin-left: 65px;
     }
+    .news.oroplata {
+        align-items: start;
+    }
+    .news h1 {
+        text-align: left;
+    }
+}
+@media screen and (min-width: 850px){
+    .foto1.tres {
+        margin-left:calc(-42px + (850px - 100vw ) * (-0.5));
+    }
+    
 }
 /*----------MIN WIDTH 900 TEXT SILENCIO SEPULCRAL-------------------------*/
 @media screen and (min-width: 900px) {
@@ -969,12 +995,12 @@ h3, h2{
         width:500px;
     }
 }
-
 /*-------------------MIN-WIDTH 1000px --------NEWS-----------------------*/
 @media screen and (min-width: 995px) {
     .news p {
         font-size: 30px;
     }
+ 
 }
 @media screen and (min-width:1000px){
     .news p{
@@ -983,6 +1009,19 @@ h3, h2{
     .text p {
         font-size: 20px;
     }
+   .foto1.tres {
+        margin-left:clamp(-95px, calc(-95px + (1000px - 100vw) * (-0.2)), -48px);
+    } 
+    .foto1.tres {
+        padding-right: 0px;
+    }
+    .textnews.tres p {
+        padding-right: calc(70px + (1900px - 100vw ) * 0.1);
+    }
+    .news.tres {
+        max-width: 1104px;
+    }
+  
 }
 
 /*------------------MIN WIDTH 1212px ----- ABOUT --------*/
@@ -1017,5 +1056,4 @@ h3, h2{
         margin-left: 104px;
         padding-right: 262px;
     }
-    
 }
