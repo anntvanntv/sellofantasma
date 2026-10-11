@@ -9,7 +9,7 @@ let stage = 'prod';
 let products = [];
 
 async function getProducts() {
-    const host = stage === 'dev' ? 'http://localhost:5000' : 'https://sellofantasma.click' 
+    const host = stage === 'dev' ? 'http://localhost:5000' : 'https://sellofantasma.com'; 
     const response = await axios.get(`${host}/products`);
     //console.log(response.data);
     products = response.data.products

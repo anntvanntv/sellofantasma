@@ -1,3 +1,5 @@
+
+
 function myHamburger() {
     const menu = document.getElementById('link-block');
     const icon = document.getElementById('menu-icon');
