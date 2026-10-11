@@ -1,6 +1,6 @@
 let stage = 'prod';
 
-const host = stage === 'dev' ? 'http://localhost:5000' : 'https://sellofantasma.click' 
+const host = stage === 'dev' ? 'http://localhost:5000' : 'https://sellofantasma.com'; 
 
 const localStorageSession = localStorage.getItem('sessionId');
 
