@@ -1,5 +1,5 @@
 const express = require('express');
-const { homeCtrlFunction, cartCtrlFunction, coverCtrlFunction, gruposCtrlFunction, silsepCtrlFunction, elsaCtrlFunction, newsCtrlFunction, termsCtrlFunction, evriCtrlFunction, impeCtrlFuncion } = require('../controllers/pagesCtrlFile');
+const { homeCtrlFunction, cartCtrlFunction, coverCtrlFunction, gruposCtrlFunction, silsepCtrlFunction, elsaCtrlFunction, newsCtrlFunction, termsCtrlFunction, evriCtrlFunction, impeCtrlFuncion, kikiCtrlFunction } = require('../controllers/pagesCtrlFile');
 
 const router = express.Router();
 
@@ -10,6 +10,7 @@ router.get('/silenciosepulcral', silsepCtrlFunction);
 router.get('/elsa', elsaCtrlFunction);
 router.get('/evripidisandhistragedies', evriCtrlFunction);
 router.get('/imperio', impeCtrlFuncion);
+router.get('/kikidaki', kikiCtrlFunction);
 router.get('/news', newsCtrlFunction);
 router.get('/termsconditions', termsCtrlFunction);
 

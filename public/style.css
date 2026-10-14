@@ -311,8 +311,8 @@ footer p {
 
 #bandas{
     padding-top: 50px;
-    display: flex;
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 #bandas a{
     text-decoration: none;
@@ -321,7 +321,7 @@ footer p {
     width:100%;
 }
 .banda{
-    margin: auto 10%;   
+    margin: auto 7%;   
 }
 .banda h3, .banda h3 span{
     font-size: 14px;
@@ -442,6 +442,16 @@ h3, h2{
     cursor: pointer;
 }
 
+/*---------- KIKI D'AKI ---------------*/
+.portada-kiki{
+    width: 100%;
+    max-width: 500px;
+}
+
+.portada-kiki img{
+    width: 100%;
+    margin-bottom: 20px;
+}
 
 
 /*------------------------------ Novedades ----------------------------------------*/
@@ -451,11 +461,11 @@ h3, h2{
     margin-bottom: 55px;
     font-weight: 500;
 }
-.news.oroplata {
+/* .news.oroplata {
     display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 .news h1{
     line-height: 30px;
     text-align: center;
@@ -465,9 +475,15 @@ h3, h2{
     display: flex;
     flex-direction: column;
 }
-.foto1{
-    max-width:450px;
-}
+
+.foto1 {
+    width: 100%;
+    max-width: 333px;
+
+    }
+.foto1 img {
+    width: 100%;
+    }
 .videos.noticias {
     right:0px;
 }
@@ -488,7 +504,7 @@ h3, h2{
     justify-content: center;
     margin: 6%;
     padding-top: 50px;
-    align-items: center;
+    align-items: baseline;
 }
 .cabeceranews{
     text-align: center;
@@ -660,7 +676,7 @@ h3, h2{
     }
 }
 
-/*MIN WIDTH 568--------------------------------*/
+/*--------------MIN WIDTH 568px-----------------------*/
 
 @media screen and (min-width: 568px) {
     .videos {
@@ -673,6 +689,9 @@ h3, h2{
     }
     .text p {
         width: 80%;
+    }
+    #bandas {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
 }
 
@@ -842,6 +861,11 @@ h3, h2{
         gap:65px;
         transition: all 0.1s ease-in-out;
     }
+
+    /*--------- Kki d'Akí ------------*/
+    .portada-kiki {
+        margin-left: 85px;
+    }
     
     
 }
@@ -854,6 +878,10 @@ h3, h2{
         flex-wrap: wrap;
         margin:8px auto 54px 53px;
         align-items: start;
+    }
+
+    .title-news {
+        align-items: flex-start;
     }
     .wrap h2{
         font-size: 2.5rem;
@@ -894,23 +922,21 @@ h3, h2{
         .textnews.tres p {
             padding-right: 70px;
         }
-        .foto1 {
-            max-width: 350px;
-          }
-        .foto1.tres {
-            margin-left: -42px;
-          }
+      
+       
     
     .textnews{
         display:flex;
         flex-direction: row-reverse;
         max-width:inherit;
+        justify-content: space-between;
+        margin: auto 20px 0 0;
     }
-    .videos.noticias {
+ /*    .videos.noticias {
         margin-right: 0;
         margin-left: 92px;
         padding-right: 273px;
-    }
+    } */
     .title-news {
         align-items: flex-start;
     }
@@ -1023,15 +1049,11 @@ h3, h2{
     .text p {
         font-size: 20px;
     }
-   .foto1.tres {
-        margin-left:clamp(-95px, calc(-95px + (1000px - 100vw) * (-0.2)), -48px);
-    } 
+ 
     .foto1.tres {
         padding-right: 0px;
     }
-    .textnews.tres p {
-        padding-right: calc(70px + (1900px - 100vw ) * 0.1);
-    }
+   
     .news.tres {
         max-width: 1104px;
     }

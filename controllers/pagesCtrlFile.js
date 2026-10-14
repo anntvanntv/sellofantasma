@@ -27,6 +27,10 @@ exports.impeCtrlFuncion = ( req, res) => {
     res.render('imperio');
 }
 
+exports.kikiCtrlFunction = ( req, res) => {
+    res.render('kikidaki');
+}
+
 exports.gruposCtrlFunction = (req, res) => {
     res.render('grupos');
 }
