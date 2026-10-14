@@ -479,6 +479,7 @@ h3, h2{
 .foto1 {
     width: 100%;
     max-width: 500px;
+    margin-right: 35px;
 
     }
 .foto1 img {
