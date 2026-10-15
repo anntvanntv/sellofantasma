@@ -410,7 +410,7 @@ h3, h2{
     font-size: 1rem;
 }  
 .text p{
-    width: 300px;
+    width: 273px;
 } 
 .videos {
    /*  max-width:350px;
@@ -452,6 +452,14 @@ h3, h2{
     width: 100%;
     margin-bottom: 20px;
 }
+
+.box-kiki {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 567px));
+  padding: 30px;
+}
+
+
 
 
 /*------------------------------ Novedades ----------------------------------------*/
@@ -677,6 +685,14 @@ h3, h2{
     }
 }
 
+/*---------- min-width: 582px -----------------------*/
+
+@media screen and (min-width: 582px) {
+    .box-kiki {
+        padding: 47px;
+    }
+}
+
 /*--------------MIN WIDTH 568px-----------------------*/
 
 @media screen and (min-width: 568px) {
@@ -854,9 +870,14 @@ h3, h2{
         font-size: 18px;
         font-weight: 500;
         text-align: inherit;
-        width: 382px;
-       
+        width: 382px;  
     }
+
+    .text-kikidaki p {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
     .xarxes{
         display: flex;
         gap:65px;
@@ -864,9 +885,9 @@ h3, h2{
     }
 
     /*--------- Kki d'Akí ------------*/
-    .portada-kiki {
-        margin-left: 85px;
-    }
+   .box-kiki {
+    padding: 81px 0 0 76px;
+   }
     
     
 }
@@ -1047,7 +1068,7 @@ h3, h2{
     .news p{
         max-width:600px;
     }
-    .text p {
+    .text p, .text-kikidaki p {
         font-size: 20px;
     }
  
