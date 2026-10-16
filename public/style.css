@@ -515,6 +515,10 @@ h3, h2{
     padding-top: 50px;
     align-items: baseline;
 }
+
+.newsletter {
+    margin-left: 6%;
+}
 .cabeceranews{
     text-align: center;
 }
@@ -900,6 +904,9 @@ h3, h2{
         flex-wrap: wrap;
         margin:8px auto 54px 53px;
         align-items: start;
+    }
+    .newsletter {
+        margin: 20px 54px;
     }
 
     .title-news {
